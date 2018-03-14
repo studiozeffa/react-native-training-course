@@ -1,0 +1,25 @@
+{
+  "name": "react-native-training-course",
+  "version": "1.0.0",
+  "description": "A set of training materials to learn how to build a React Native app.",
+  "scripts": {
+    "slides:setup": "remarker -s notes/setup.md",
+    "slides:components": "remarker -s notes/components.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiozeffa/react-native-training-course.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Tom Spencer <tom.spencer@studiozeffa.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studiozeffa/react-native-training-course/issues"
+  },
+  "homepage": "https://github.com/studiozeffa/react-native-training-course#readme",
+  "devDependencies": {
+    "remarker": "studiozeffa/remarker"
+  }
+}

@@ -1,0 +1,215 @@
+# React Native Components
+
+## Concepts
+
+- A React Native app is simply a React app with a collection of custom components and APIs, which renders as a native mobile app instead of to the browser.
+- Many of these components are inspired by the web (e.g. `View`, `Text`, `Image`).
+- APIs are used to create stylesheets, access hardware sensors (camera, accelerometer, etc) and conditionally execute code on specific platforms.
+
+<!-- break -->
+
+## View
+
+A `View` is like a `div`. Use it as a generic container, which can:
+
+- be styled
+- hold other components
+
+``` jsx
+const style = { /* ... */ };
+return (
+  <View style={style}>
+    <Text>I'm inside a View!</Text>
+  </View>
+)
+```
+
+<!-- break -->
+
+## Styles and StyleSheet
+
+Styles are used to lay out and apply visual styles to a component. They are applied to components using the `style` attribute. A `StyleSheet` can be used to collect a group of styles.
+
+Style notation is heavily inspired by CSS, using `camelCase` instead of `kebab-case`. Mostly, think of the CSS property you want to apply, and make it `camelCase`.
+
+For example:
+
+``` js
+{
+  margin: 10,   // Dimensions are numbers instead of px or em
+  paddingVertical: 8,   // also available: paddingHorizontal
+  fontSize: 18,
+  justifyContent: 'center'
+}
+```
+
+<!-- break -->
+
+## Styles and StyleSheet (cont.)
+
+One big difference to CSS is that React Native styles almost never cascade (that is, child components do not inherit styles applied to their parents). The one exception here is nested `Text` components.
+
+### Layout
+
+Layout is governed by a system known as 'Yoga', which is very similar to flexbox.
+
+The one big exception is that it lays out neighbouring components in a column, rather than a row (i.e. `flexDirection` defaults to `'column'`).
+
+Use `flex: 1` on the root `View` container to ensure that the app fills the entire screen.
+
+<!-- break -->
+
+## Styles and StyleSheet (example)
+
+``` jsx
+const styles = StyleSheet.create({
+  boxes: {
+    flexDirection: 'row'
+  },
+  box: {
+    height: 100, width: 100, margin: 10,
+    backgroundColor: 'firebrick'
+  }
+});
+
+return (
+  <View style={styles.boxes}>
+    <View style={styles.box} />
+    <View style={styles.box} />
+  </View>
+);
+```
+
+<!-- break -->
+
+## Text
+
+`Text` is used to render a set of characters to the screen.
+
+Unlike all other components, `Text` will wrap when it reaches the end of its container. Styles will also cascade to child `Text` components.
+
+Each platform has a predefined set of built-in fonts that can be used. You can also add custom fonts, similar to the web.
+
+``` jsx
+const style = { fontSize: 18, color: 'brown' };
+return (
+  <Text style={style}>
+    The quick brown fox jumped over the lazy dog.
+  </Text>
+);
+```
+
+<!-- break -->
+
+## ScrollView
+
+Unlike the web, a regular `View` will not become scrollable when its content overflows the container.
+
+We must use a `ScrollView` to achieve this.
+
+``` jsx
+return (
+  <ScrollView>
+    <Text>Laboris in ea fugiat nisi exercitation ipsum elit
+    incididunt fugiat cupidatat in. Tempor nisi sint ad non
+    excepteur mollit sint adipisicing. Laborum ut et culpa
+    dolore elit eiusmod laborum in ullamco qui qui elit sunt.
+    </Text>
+  </ScrollView>
+);
+```
+
+<!-- break -->
+
+## Local Images
+
+An `Image` component is used to render an image, either stored locally within the app, or from a remote URL.
+
+Local images must be `require`d:
+
+``` jsx
+const source = require('./resources/image.png');
+return <Image source={source} />
+```
+
+To support high resolution displays, provide three versions of each image, at 1x, 2x and 3x sizes. Name the images as follows - React Native will choose the best one automatically:
+
+- Original (1x) size: `image.png`
+- 2x size: `image@2x.png`
+- 3x size: `image@3x.png`
+
+<!-- break -->
+
+## Remote Images
+
+Remote images are loaded via their URL, and must have a specific height/width set (otherwise they will not be visible):
+
+``` jsx
+// Source should be an object with a `uri` key
+const source = {
+  uri: 'http://lorempixel.com/300/150/'
+};
+
+const style = {
+  height: 150,
+  width: 300
+};
+
+return <Image source={source} style={style} />
+```
+
+<!-- break -->
+
+## Buttons
+
+A React Native button can be created with one of two components:
+
+- `TouchableHighlight`
+- `TouchableOpacity`
+
+You are free to use many other components as a child of the `Touchable*` component, typically you would use `Text` and/or `Image`.
+
+Add an `onPress` attribute to govern what happens when the button is pressed.
+
+A `Button` component also exists, which is a thin wrapper around `TouchableHighlight`. Use `TouchableHighlight` instead, as it is more flexible.
+
+<!-- break -->
+
+## TouchableHighlight
+
+A button which changes the colour of its background when it is tapped.
+
+Often used for main 'call-to-action' type buttons, or tappable items in a list.
+
+``` jsx
+const styles = StyleSheet.create({
+  button: { backgroundColor: '#0288D1', padding: 20 },
+  label: { color: '#FFFFFF' }
+});
+return (
+  <TouchableHighlight style={styles.button}
+   underlayColor="#01579B" onPress={this.onPress}>
+    <Text style={styles.label}>Press Me!</Text>
+  </TouchableHighlight>
+);
+```
+
+<!-- break -->
+
+## TouchableOpacity
+
+A button which lowers its opacity when it is tapped.
+
+Often used for 'backgroundless' buttons, such as icon buttons in a header or tab bar.
+
+``` jsx
+const iconSource = require('./heart.png');
+const styles = StyleSheet.create({
+  icon: { height: 32, width: 32, margin: 10 }
+});
+return (
+  <TouchableOpacity activeOpacity={0.5} onPress={this.onPress}>
+    <Image style={styles.icon} source={iconSource} />
+  </TouchableOpacity>
+);
+```

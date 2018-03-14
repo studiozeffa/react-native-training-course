@@ -1,6 +1,6 @@
-# Films Guide App
+# News Feed App
 
-The films guide app is the third app we build on the course. It is intended as an informal assessment to test your React Native knowledge gained over the week.
+The news feed app is the third app we build on the course. It is intended as an informal assessment to test your React Native knowledge gained throughout the course.
 
 ## Wireframe
 

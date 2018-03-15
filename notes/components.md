@@ -226,3 +226,16 @@ return (
   </TouchableOpacity>
 );
 ```
+
+<!-- break -->
+
+## Further Reading
+
+- [View](http://www.reactnativeexpress.com/view)
+- [Text](https://facebook.github.io/react-native/docs/text.html)
+- [Styles](https://facebook.github.io/react-native/docs/style.html) and [StyleSheet](https://facebook.github.io/react-native/docs/stylesheet.html)
+- [Flexbox](http://www.reactnativeexpress.com/flexbox)
+- [Image](http://www.reactnativeexpress.com/image)
+- [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html)
+- [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight.html)
+- [ScrollView](http://www.reactnativeexpress.com/scrollview)

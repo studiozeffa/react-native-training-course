@@ -77,6 +77,17 @@ Open the Expo app on your mobile device, and scan the QR code. The newly scaffol
 
 <!-- break -->
 
+## Code structure
+
+Open up the resulting project in your code editor. You should see a few JavaScript, JSON and config files. Here's a summary of the important ones:
+
+- `App.js` - the entrypoint for the app. Open this up and you'll see the sample React Native app which is created by the `create-react-native-app` tool.
+- `app.json` - metadata for your app. Used for various things, particularly when publishing the app to the App Store.
+- `package.json` - holds a list of the dependencies for your app.
+- `App.test.js` - you can run unit tests on a React Native app using a tool called [Jest](https://facebook.github.io/jest/). The convention is to name test files with the `.test.js` suffix. We won't be covering testing on this course.
+
+<!-- break -->
+
 ## Troubleshooting
 
 ### Expo app can't connect to development server

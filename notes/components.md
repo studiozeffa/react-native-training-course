@@ -1,10 +1,15 @@
-# React Native Components
-
-## Concepts
+## React Native Components
 
 - A React Native app is simply a React app with a collection of custom components and APIs, which renders as a native mobile app instead of to the browser.
-- Many of these components are inspired by the web (e.g. `View`, `Text`, `Image`).
+- Many of these components are inspired by the web (e.g. `View`, `Text`, `Image`). Since they are custom components, they must be imported for use:
+
+    ``` js
+    import { View, Text, StyleSheet } from 'react-native';
+    ```
+
 - APIs are used to create stylesheets, access hardware sensors (camera, accelerometer, etc) and conditionally execute code on specific platforms.
+
+
 
 <!-- break -->
 
@@ -30,32 +35,9 @@ return (
 
 Styles are used to lay out and apply visual styles to a component. They are applied to components using the `style` attribute. A `StyleSheet` can be used to collect a group of styles.
 
-Style notation is heavily inspired by CSS, using `camelCase` instead of `kebab-case`. Mostly, think of the CSS property you want to apply, and make it `camelCase`.
-
-For example:
-
-``` js
-{
-  margin: 10,   // Dimensions are numbers instead of px or em
-  paddingVertical: 8,   // also available: paddingHorizontal
-  fontSize: 18,
-  justifyContent: 'center'
-}
-```
-
-<!-- break -->
-
-## Styles and StyleSheet (cont.)
-
 One big difference to CSS is that React Native styles almost never cascade (that is, child components do not inherit styles applied to their parents). The one exception here is nested `Text` components.
 
-### Layout
-
-Layout is governed by a system known as 'Yoga', which is very similar to flexbox.
-
-The one big exception is that it lays out neighbouring components in a column, rather than a row (i.e. `flexDirection` defaults to `'column'`).
-
-Use `flex: 1` on the root `View` container to ensure that the app fills the entire screen.
+Style notation is heavily inspired by CSS, using `camelCase` instead of `kebab-case`. Mostly, think of the CSS property you want to apply, and make it `camelCase`.
 
 <!-- break -->
 
@@ -64,9 +46,10 @@ Use `flex: 1` on the root `View` container to ensure that the app fills the enti
 ``` jsx
 const styles = StyleSheet.create({
   boxes: {
-    flexDirection: 'row'
+    flexDirection: 'row'  // Use flexbox to lay things out
   },
   box: {
+    // Dimensions are numbers instead of px or em
     height: 100, width: 100, margin: 10,
     backgroundColor: 'firebrick'
   }
@@ -79,6 +62,36 @@ return (
   </View>
 );
 ```
+
+<!-- break -->
+
+## Multiple Styles
+
+You can apply multiple styles to a component using an array. For example:
+
+``` jsx
+const styles = StyleSheet.create({
+  box: {
+    height: 100, width: 100, margin: 10
+  },
+  boxPrimary: {
+    backgroundColor: 'firebrick'
+  },
+  boxSecondary: {
+    backgroundColor: 'seagreen'
+  }
+});
+```
+
+<!-- break -->
+
+## Layout
+
+Layout is governed by a system known as 'Yoga', which is very similar to flexbox.
+
+The one big exception is that it lays out neighbouring components in a column, rather than a row (i.e. `flexDirection` defaults to `'column'`).
+
+Use `flex: 1` on the root `View` container to ensure that the app fills the entire screen.
 
 <!-- break -->
 

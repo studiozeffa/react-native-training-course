@@ -36,9 +36,15 @@ In the first section, we'll learn about the fundamental building blocks of a Rea
 - Move on to the [challenges](challenges/components.md)
 - Finish by building an [app from a brief](apps/counter-app/README.md)
 
+### Aside: Debugging Techniques
+
+We take a short break from building apps to discuss the different techniques for debugging React Native apps.
+
+- Refer to the [notes](notes/debugging.md) for more details.
+
 ### Section 2: Navigation
 
-We'll then discover how to navigate between different pages in a React Native app.
+Next, we'll discover how to navigate between different pages in a React Native app.
 
 - Start with the [notes](notes/navigation.md)
 - Move on to the [challenges](challenges/navigation.md)

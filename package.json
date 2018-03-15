@@ -4,7 +4,8 @@
   "description": "A set of training materials to learn how to build a React Native app.",
   "scripts": {
     "slides:setup": "remarker -s notes/setup.md",
-    "slides:components": "remarker -s notes/components.md"
+    "slides:components": "remarker -s notes/components.md",
+    "slides:debugging": "remarker -s notes/debugging.md"
   },
   "repository": {
     "type": "git",

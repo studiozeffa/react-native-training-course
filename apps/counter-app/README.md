@@ -32,10 +32,9 @@ The app should:
 
 These requirements are not part of the core project, but can be implemented as enhancements.
 
-- When the app is restarted, it should remember the previous counter value, and all history. (Hint: the app should use Redux, and Redux Persist)
 - A button should be present to reset the counter value.
 - A button should be present to reset the history list.
-- A sound should be played when the counter is incremented or decremented.
+- When the app is restarted, it should remember the previous counter value, and all history. (Hint: the app should use Redux, and [Redux Persist](https://github.com/rt2zz/redux-persist))
 
 ## Completed app
 

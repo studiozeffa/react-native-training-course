@@ -1,15 +1,14 @@
 ## React Native Components
 
-- A React Native app is simply a React app with a collection of custom components and APIs, which renders as a native mobile app instead of to the browser.
-- Many of these components are inspired by the web (e.g. `View`, `Text`, `Image`). Since they are custom components, they must be imported for use:
+A React Native app is simply a React app with a collection of custom components and APIs, which renders as a native mobile app instead of to the browser.
 
-    ``` js
-    import { View, Text, StyleSheet } from 'react-native';
-    ```
+Many of these components are inspired by the web (e.g. `View`, `Text`, `Image`). Since they are custom components, they must be imported for use:
 
-- APIs are used to create stylesheets, access hardware sensors (camera, accelerometer, etc) and conditionally execute code on specific platforms.
+``` js
+import { View, Text, StyleSheet } from 'react-native';
+```
 
-
+APIs are used to create stylesheets, access hardware sensors (camera, accelerometer, etc) and conditionally execute code on specific platforms.
 
 <!-- break -->
 
@@ -41,7 +40,17 @@ Style notation is heavily inspired by CSS, using `camelCase` instead of `kebab-c
 
 <!-- break -->
 
-## Styles and StyleSheet (example)
+## Layout
+
+Layout is governed by a system known as 'Yoga', which is very similar to flexbox.
+
+The one big exception is that it lays out neighbouring components in a column, rather than a row (i.e. `flexDirection` defaults to `'column'`).
+
+Use `flex: 1` on the root `View` container to ensure that the app fills the entire screen.
+
+<!-- break -->
+
+### Styles example
 
 ``` jsx
 const styles = StyleSheet.create({
@@ -67,31 +76,24 @@ return (
 
 ## Multiple Styles
 
-You can apply multiple styles to a component using an array. For example:
+You can apply multiple styles to a component using an array:
 
 ``` jsx
 const styles = StyleSheet.create({
   box: {
     height: 100, width: 100, margin: 10
   },
-  boxPrimary: {
-    backgroundColor: 'firebrick'
-  },
-  boxSecondary: {
-    backgroundColor: 'seagreen'
-  }
+  boxPrimary: { backgroundColor: 'firebrick' },
+  boxSecondary: { backgroundColor: 'seagreen' }
 });
+
+return (
+  <View style={styles.boxes}>
+    <View style={[styles.box, styles.boxPrimary]} />
+    <View style={[styles.box, styles.boxSecondary]} />
+  </View>
+);
 ```
-
-<!-- break -->
-
-## Layout
-
-Layout is governed by a system known as 'Yoga', which is very similar to flexbox.
-
-The one big exception is that it lays out neighbouring components in a column, rather than a row (i.e. `flexDirection` defaults to `'column'`).
-
-Use `flex: 1` on the root `View` container to ensure that the app fills the entire screen.
 
 <!-- break -->
 
@@ -188,7 +190,7 @@ A `Button` component also exists, which is a thin wrapper around `TouchableHighl
 
 <!-- break -->
 
-## TouchableHighlight
+### TouchableHighlight
 
 A button which changes the colour of its background when it is tapped.
 
@@ -209,7 +211,7 @@ return (
 
 <!-- break -->
 
-## TouchableOpacity
+### TouchableOpacity
 
 A button which lowers its opacity when it is tapped.
 

@@ -8,7 +8,7 @@ This training course focuses on learning the basics of React Native. On completi
 
 To complete this course, you'll need to be familiar with the following technologies:
 
-- Modern JavaScript
+- Modern JavaScript (ES6 and ES7)
 - React
 - Redux
 

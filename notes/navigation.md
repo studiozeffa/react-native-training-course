@@ -86,6 +86,21 @@ HomeScreen.navigationOptions = {
 
 <!-- break -->
 
+### Status Bar
+
+The status bar sits at the top of a mobile device. It includes information such as the current time, battery charge level and signal strength.
+
+The colour of the status bar can be controlled using the `StatusBar` module:
+
+``` js
+import { StatusBar } from 'react-native';
+
+// Change the text colour to white (iOS only)
+StatusBar.setBarStyle('light-content');
+```
+
+<!-- break -->
+
 ## Navigating Between Screens
 
 Each screen configured inside a `StackNavigator` will be passed a `navigation` prop.
@@ -157,3 +172,4 @@ InfoScreen.navigationOptions = ({navigation}) => ({
 ## Further Reading
 
 - [React Navigation Docs](https://reactnavigation.org/docs/getting-started.html)
+- [StatusBar](https://facebook.github.io/react-native/docs/statusbar.html)

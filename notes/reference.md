@@ -37,10 +37,7 @@ The following notes provide a broad reference guide, to allow you to build a Rea
 - [Cross-Platform Styling](https://medium.com/differential/better-cross-platform-react-native-components-cb8aadeba472)
 - [ActivityIndicator](https://facebook.github.io/react-native/docs/activityindicator.html)
 - [Text truncation](https://facebook.github.io/react-native/docs/text.html#ellipsizemode)
-- [React Navigation](https://reactnavigation.org/):
-  - [StackNavigator](https://reactnavigation.org/docs/navigators/stack)
-  - [Configuring the Header](https://reactnavigation.org/docs/intro/headers)
-  - [Navigation Prop](https://reactnavigation.org/docs/navigators/navigation-prop)
+- [React Navigation](https://reactnavigation.org/docs/getting-started.html)
 - [Vector Icons](https://expo.github.io/vector-icons/)
 - [In-App Browser](https://docs.expo.io/versions/latest/sdk/webbrowser.html)
 - [Image Progress](https://github.com/oblador/react-native-image-progress)

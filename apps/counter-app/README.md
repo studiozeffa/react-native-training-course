@@ -22,7 +22,7 @@ The app should:
 - Every time the counter is incremented or decremented, the operation should be added to a history list:
   - Each history item in the list should display:
     - the time when the operation occurred
-    - the type of operation (Incrmeent/Decrement)
+    - the type of operation (Increment/Decrement)
     - the counter values before & after the operation.
   - The most recent operation should be shown at the top of the history list.
   - If the history list becomes longer than its container, it should be scrollable.

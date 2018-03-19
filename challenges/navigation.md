@@ -12,13 +12,20 @@
 > At this point, you should see an app with a blank headerbar, and a single button in the centre of the screen.
 
 - Give the `StartScreen` the title `Start`.
-- Make the headerbar the same colour as the button, and the headerbar text white.
+- Make the headerbar the same colour as the button, and the headerbar text white. If you are running the app on iOS, ensure the status bar text is also white.
 - Create a second component, `ImageScreen`. Inside this component, render an image using the URI `https://picsum.photos/400/600/?random`. Make sure the image is 200 wide, 300 high, horizontally centered and spaced vertically from the headerbar by a margin of 10.
 - Give the image screen a headerbar title of `Regular Image`.
 - When the button on the `StartScreen` is tapped, change its background colour to #1B5E20, and navigate to the `ImageScreen`.
 
-> You should now have an app which navigates from `StartScreen` to `InfoScreen`.
+> You should now have an app which navigates from `StartScreen` to `ImageScreen`.
 
 - Add two more buttons to the StartScreen below the first. Make sure they have a space of 10 between them.
 - The second button should have the title 'View Greyscale Image'. When tapped, it should show the ImageScreen with a headerbar title of `Greyscale Image` and an image with the URI `https://picsum.photos/g/400/600/?random`.
 - The third button should have the title 'View Blurred Image'. When tapped, it should show the ImageScreen with a headerbar title of `Blurred Image` and an image with the URI `https://picsum.photos/400/600/?random&blur`.
+
+## Extras
+
+- Add a button to the headerbar of the `ImageScreen` (see the [React Navigation docs](https://reactnavigation.org/docs/header-buttons.html) for more info on how to add a button to the headerbar).
+  - The button should be a `TouchableOpacity` with an `Image` child. Use an icon as the image (see the [Expo docs](https://docs.expo.io/versions/latest/guides/icons.html) regarding using icons, and choose an icon from [the directory](https://expo.github.io/vector-icons/)).
+  - When the button is tapped, open an in-app browser window using the image URL that was passed in to the `ImageScreen` (use the Expo [WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser.html) to achieve this).
+- If you are using a Mac, add support for the iPhone X (see the [React Navigation docs](https://reactnavigation.org/docs/handling-iphonex.html) and use the iPhone X simulator in Xcode).

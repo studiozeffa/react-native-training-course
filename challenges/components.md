@@ -2,8 +2,6 @@
 
 > Tip: start a new app with `create-react-native-app` to complete these challenges.
 
-> Tip: when your app first loads, shake your device and choose 'Enable Live Reload'. This will ensure that your code changes are automatically applied on your device.
-
 - Modify the scaffolded `App.js` file so that the text is aligned to the top left of the screen (hint: `App.js` contains flexbox styles to center the text, this needs to be undone). Give the container a padding of 20, which will stop the text from overlapping the statusbar at the top of the screen.
 - Download the three _morpheus_ images from the [assets folder](assets/) to your computer. Create an `Image` inside your container which should display the image, replacing the existing text. Ensure it is horizontally centred and has a vertical margin of 5.
 - Below the image, add some `Text`: _This is your last chance. After this, there is no turning back. You take the blue pill — the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill — you stay in Wonderland, and I show you how deep the rabbit hole goes._.

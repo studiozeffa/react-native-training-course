@@ -67,7 +67,7 @@ return (
 
 ## FlatList
 
-There is a convenient component we can use instead when rendering lists called `FlatList`. This can be used as a replacement of `ScrollView`:
+When rendering a list of items, a better alternative to `ScrollView` is available: `FlatList`.
 
 ``` jsx
 import React, { Component } from 'react';
@@ -89,7 +89,7 @@ class List extends Component {
 
 ### keyExtractor
 
-Use the `keyExtractor` prop to extract a key for each item:
+Similar to a `ScrollView`, each item in the `FlatList` needs a key:
 
 ``` jsx
 import React, { Component } from 'react';
@@ -110,9 +110,9 @@ class List extends Component {
 ```
 <!-- break -->
 
-### renderSeparator
+### ItemSeparatorComponent
 
-Use the `renderSeparator` prop to render a separator between each item:
+Use `ItemSeparatorComponent` to render a separator between each item:
 
 ``` jsx
 import React, { Component } from 'react';
@@ -126,7 +126,7 @@ class List extends Component {
 
   render() {
     return (
-      <FlatList renderSeparator={this.renderSeparator} />
+      <FlatList ItemSeparatorComponent={this.renderSeparator} />
     );
   }
 }
@@ -136,7 +136,9 @@ class List extends Component {
 
 ## Text truncation
 
-Sometimes, you don't want `Text` to wrap when it reaches the end of its container. You can use the `numberOfLines` prop to truncate text after a specific number of lines.
+Sometimes, you don't want `Text` to wrap when it reaches the end of its container. This is especially true when rendering list items.
+
+You can use the `numberOfLines` prop to truncate text after a specific number of lines.
 
 ``` jsx
 return (
@@ -168,7 +170,7 @@ const isAndroid = Platform.OS === 'android';
 
 ## Platform-specific styles
 
-Oftentimes we want to change styles according to the platform. This is possible with `Platform.select()`:
+Oftentimes we also want to change styles according to the platform. This is possible with `Platform.select()`:
 
 ``` js
 import { Platform } from 'react-native';

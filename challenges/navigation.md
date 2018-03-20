@@ -29,3 +29,5 @@
   - The button should be a `TouchableOpacity` with an `Image` child. Use an icon as the image (see the [Expo docs](https://docs.expo.io/versions/latest/guides/icons.html) regarding using icons, and choose an icon from [the directory](https://expo.github.io/vector-icons/)).
   - When the button is tapped, open an in-app browser window using the image URL that was passed in to the `ImageScreen` (use the Expo [WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser.html) to achieve this).
 - If you are using a Mac, add support for the iPhone X (see the [React Navigation docs](https://reactnavigation.org/docs/handling-iphonex.html) and use the iPhone X simulator in Xcode).
+- Work through the [Fundamentals](https://reactnavigation.org/docs/getting-started.html) in the React Navigation docs to reinforce what you have learned here.
+- Tabs are another common navigation pattern. Learn more about how to set up a tab-based navigator in [the Tab navigation docs](https://reactnavigation.org/docs/tab-based-navigation.html).

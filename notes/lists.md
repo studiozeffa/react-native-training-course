@@ -108,6 +108,29 @@ class List extends Component {
   }
 }
 ```
+<!-- break -->
+
+### renderSeparator
+
+Use the `renderSeparator` prop to render a separator between each item:
+
+``` jsx
+import React, { Component } from 'react';
+import { View, Text, FlatList } from 'react-native';
+
+class List extends Component {
+  renderSeparator() {
+    const style = { height: 1, color: '#777' };
+    return <View style={style} />;
+  }
+
+  render() {
+    return (
+      <FlatList renderSeparator={this.renderSeparator} />
+    );
+  }
+}
+```
 
 <!-- break -->
 

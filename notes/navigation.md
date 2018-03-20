@@ -103,19 +103,19 @@ StatusBar.setBarStyle('light-content');
 
 ## Navigating Between Screens
 
-Each screen configured inside a `StackNavigator` will be passed a `navigation` prop.
-
-Use this to navigate to a new screen:
+Each screen configured inside a `StackNavigator` will be passed a `navigation` prop. Use this to navigate to a new screen:
 
 ``` jsx
 import React, { Component } from 'react';
-import { View, Button } from 'react-native';
-
+import { Button } from 'react-native';
 class HomeScreen extends Component {
-  onPress() {
-    this.props.navigation.navigate('InfoScreen');
+  constructor(props) {
+    super(props);
+    this.onPress = this.onPress.bind(this);
   }
-
+  onPress() {
+    this.props.navigation.navigate('Info');
+  }
   render() {
     return <Button title="Info Screen" onPress={this.onPress} />;
   }
@@ -131,7 +131,7 @@ Pass an object as the second argument to `navigate` to send data to the screen. 
 ``` jsx
 class HomeScreen extends Component {
   onPress() {
-    this.props.navigation.navigate('InfoScreen', {
+    this.props.navigation.navigate('Info', {
       body: 'This is the Info Screen'
     });
   }
@@ -163,8 +163,28 @@ class HomeScreen extends Component {
 class InfoScreen extends Component {}
 
 InfoScreen.navigationOptions = ({navigation}) => ({
-  title: navigtion.state.params.title
+  title: navigation.state.params.title
 })
+```
+
+<!-- break -->
+
+## Updating headerbar globally
+
+You can modify all instances of the headerbar in a `StackNavigator` by setting a `navigationOptions` property via a second argument:
+
+``` js
+const RootNavigator = StackNavigator({
+  Home: HomeScreen,
+  Info: InfoScreen
+}, {
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: '#68aa63'
+    },
+    headerTintColor: '#ffffff'
+  }
+});
 ```
 
 <!-- break -->

@@ -21,7 +21,7 @@
   - The contact's company should be prefixed _He works at_ or _She works at_, depending on the contact's gender.
   - The contact's favourite film should be prefixed _His favourite film is_ or _Her favourite film is_, depending on the contact's gender.
 
-> The final app should resemble the following:
+The final app should resemble the following:
 
 <img src="screenshots/list-detail.png" height="500">
 

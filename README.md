@@ -20,7 +20,7 @@ Follow the instructions [in this setup guide](notes/setup.md) to get this sorted
 
 ## Course Structure
 
-The course comprises of two sections, and culminates in a quiz.
+The course comprises of three sections, and culminates in a quiz.
 
 In each section, we will:
 
@@ -48,6 +48,13 @@ Next, we'll discover how to navigate between different pages in a React Native a
 
 - Start with the [notes](notes/navigation.md)
 - Move on to the [challenges](challenges/navigation.md)
+
+### Section 3: List/Detail pattern
+
+Then, we'll discuss the list/detail pattern and how to apply it in  React Native app.
+
+- Start with the [notes](notes/lists.md)
+- Move on to the [challenges](challenges/lists.md)
 - Finish by building an [app from a brief](apps/films-guide-app/README.md)
 
 ### Quiz

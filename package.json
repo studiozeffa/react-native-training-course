@@ -6,7 +6,8 @@
     "slides:setup": "remarker -s notes/setup.md",
     "slides:components": "remarker -s notes/components.md",
     "slides:debugging": "remarker -s notes/debugging.md",
-    "slides:navigation": "remarker -s notes/navigation.md"
+    "slides:navigation": "remarker -s notes/navigation.md",
+    "slides:lists": "remarker -s notes/lists.md"
   },
   "repository": {
     "type": "git",

@@ -29,8 +29,8 @@ The [React Navigation](https://reactnavigation.org) library applies these naviga
 
 It is a third party dependency, install it with `yarn`:
 
-```
-  yarn add react-navigation
+``` bash
+yarn add react-navigation
 ```
 
 Using this library, set up a `StackNavigator`, which defines the different screens to navigate between. Each screen will be created as a separate React component.

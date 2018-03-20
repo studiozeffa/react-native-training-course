@@ -38,10 +38,10 @@ One way to implement the list is to use a `ScrollView` with many individual `Vie
 ``` jsx
 return (
   <ScrollView>
-    <View><Text>Item 1</Text></View>
-    <View><Text>Item 2</Text></View>
-    <View><Text>Item 3</Text></View>
-    <View><Text>Item 4</Text></View>
+    <View><Text>1</Text></View>
+    <View><Text>2</Text></View>
+    <View><Text>3</Text></View>
+    <View><Text>4</Text></View>
   </ScrollView>
 );
 ```
@@ -74,13 +74,37 @@ import React, { Component } from 'react';
 import { View, Text, FlatList } from 'react-native';
 
 class List extends Component {
-  renderItem({item, index}) {
-    return <View key={index}><Text>{item}</Text></View>;
+  renderItem({item}) {
+    return <View><Text>{item}</Text></View>;
   }
 
   render() {
     const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
-    return <FlatList data={items} renderItem={this.renderItem} />
+    return <FlatList data={items} renderItem={this.renderItem} />;
+  }
+}
+```
+
+<!-- break -->
+
+### keyExtractor
+
+Use the `keyExtractor` prop to extract a key for each item:
+
+``` jsx
+import React, { Component } from 'react';
+import { View, Text, FlatList } from 'react-native';
+
+class List extends Component {
+  keyExtractor(item, index) {
+    return index;
+  }
+
+  render() {
+    const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+    return (
+      <FlatList data={items} keyExtractor={this.keyExtractor} />
+    );
   }
 }
 ```
@@ -167,17 +191,21 @@ and the following on Android:
 
 Since much of React Native runs as JavaScript, we can use any JavaScript-based library, provided it does not use any browser APIs.
 
-In practice, this means that any library that is compatible with node.js, will work with React Native.
+Install a third party library with `yarn`:
 
-We can install/import these libraries as normal.
+``` bash
+yarn add moment
+```
+
+Then import the library for use as normal:
 
 ``` jsx
 import React from 'react';
 import { Text } from 'react-native';
 import moment from 'moment';
 
-const DayOfWeek = ({date}) => (
-  <Text>{moment(date).dayOfWeek()}</Text>
+const RightNow = ({date}) => (
+  <Text>{moment(date).calendar()}</Text>
 );
 ```
 

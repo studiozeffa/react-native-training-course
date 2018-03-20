@@ -111,6 +111,25 @@ class List extends Component {
 
 <!-- break -->
 
+## Text truncation
+
+Sometimes, you don't want `Text` to wrap when it reaches the end of its container. You can use the `numberOfLines` prop to truncate text after a specific number of lines.
+
+``` jsx
+return (
+  <Text numberOfLines={1}>
+    Laboris in ea fugiat nisi exercitation ipsum elit incididunt
+    fugiat cupidatat in. Tempor nisi sint ad non excepteur mollit
+    sint adipisicing. Laborum ut et culpa dolore elit eiusmod
+    laborum in ullamco qui qui elit sunt.
+  </Text>
+);
+```
+
+The text will be truncated, and ellipses will be added (`...`).
+
+<!-- break -->
+
 ## Platform-specific code
 
 Sometimes we want to conditionally run code depending on the target platform (iOS / Android). We can achieve this using the `Platform` module.

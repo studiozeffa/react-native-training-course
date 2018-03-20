@@ -16,7 +16,7 @@
   - The content below the headerbar should be horizontally padded by 20.
   - The contact's picture should be displayed in the main content area, below the headerbar. It should be 200x200 with a bottom margin of 10, and should be horizontally centered.
   - The contact's gender, address and company should be rendered below the picture. Each line should be of font size 18, and have a vertical margin of 5.
-  - The contact's gender should be displayed in Title case, prefixed with _<name> is_. So, if the contact of name _Joe Bloggs_ is male, this line should read _Joe Bloggs is Male._
+  - The contact's gender should be displayed in Title case, prefixed with _<name> is_. So, if _Joe Bloggs_ is male, this line should read _Joe Bloggs is Male._
   - The contact's address should be prefixed _He lives at_ or _She lives at_, depending on the contact's gender.
   - The contact's company should be prefixed _He works at_ or _She works at_, depending on the contact's gender.
   - The contact's favourite film should be prefixed _His favourite film is_ or _Her favourite film is_, depending on the contact's gender.
@@ -31,5 +31,5 @@
 - Modify the FlatList item to include the contact's avatar and age. The age should be displayed below the name, with the avatar to the left of both.
 - Add a chevron to the right hand side of the list item, but only on iOS:
   - Use the [expo vector icons](https://docs.expo.io/versions/latest/guides/icons.html#expovector-icons) package, and search for the appropriate icon to use.
-  - Ensure the icon is vertically centered inside the item, is coloured #777 and has a size of 16.
+  - Ensure the icon is vertically centered inside the item, is coloured #ddd and has a size of 16.
 - Add an icon to the headerbar of the Detail view. When the icon is tapped, open the [Expo WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser.html) with the URL of the contact's favourite film. (Hint: use a `TouchableOpacity`, and check out the [React Navigation docs](https://reactnavigation.org/docs/header-buttons.html) for an example of headerbar buttons).

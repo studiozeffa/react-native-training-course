@@ -28,7 +28,10 @@ The final app should resemble the following:
 ## Extras
 
 - Use the [react-native-image-progress](https://github.com/oblador/react-native-image-progress) module to show a loading spinner while the contact's image is loading.
-- Modify the FlatList item to include the contact's avatar and age. The age should be displayed below the name, with the avatar to the left of both.
+- Modify the FlatList item to include the contact's avatar and company. The company should be displayed below the name, with a grey colour. The avatar should be to the left of them both, and should be enclosed in a circle. For example:
+
+<img src="screenshots/avatar-list.png" height="200">
+
 - Add a chevron to the right hand side of the list item, but only on iOS:
   - Use the [expo vector icons](https://docs.expo.io/versions/latest/guides/icons.html#expovector-icons) package, and search for the appropriate icon to use.
   - Ensure the icon is vertically centered inside the item, is coloured #ddd and has a size of 16.

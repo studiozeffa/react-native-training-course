@@ -120,7 +120,7 @@ import { View, Text, FlatList } from 'react-native';
 
 class List extends Component {
   renderSeparator() {
-    const style = { height: 1, color: '#777' };
+    const style = { height: 1, backgroundColor: '#777' };
     return <View style={style} />;
   }
 

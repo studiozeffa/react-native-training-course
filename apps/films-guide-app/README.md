@@ -44,6 +44,7 @@ You will find the following information helpful when developing the app.
   - 40-59%: `#71500f`
   - Less than 40%: `#7e2310`
 - Fake films JSON data: [find it here](assets/films.json)
+- The URL to the image on the detail screen should take the form `https://image.tmdb.org/t/p/original/<tmdbImageId>.jpg`, where `<tmdbImageId>` points to the image ID for that particular film.
 - API endpoint: `https://filmsonfreeview.herokuapp.com/api/films`
 - When rendering the detail view, consider that some of the data might not be available, and how this should impact the layout. For example, consider the following films from the static JSON file, and see [this folder](resources/) for examples of how the layout should adapt to the data:
   - *Legend*: includes release date but no rating

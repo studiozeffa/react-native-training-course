@@ -30,8 +30,8 @@ The app should:
 - Import the [films JSON data](assets/films.json) and use it to render the list screen.
 - Implement the main content view in the detail screen (ignore the headerbar button for now).
 - Migrate the app to use Redux. Initialise the store with the films JSON data.
-- Use Redux Thunk to fetch the data from the films API instead: `https://filmsonfreeview.herokuapp.com/api/films`. While the list screen is loading the data, consider rendering an [ActivityIndicator]().
-- Implement the headerbar button to show the film in the In-App Browser. Take a look at the extras section for the [navigation challenges](../challenges/navigation) for more details on how to achieve this.
+- Use Redux Thunk to fetch the data from the films API instead: `https://filmsonfreeview.herokuapp.com/api/films`. While the list screen is loading the data, consider rendering an [ActivityIndicator](https://facebook.github.io/react-native/docs/activityindicator.html).
+- Implement the headerbar button to show the film in the In-App Browser. Take a look at the extras section for the [navigation challenges](../../challenges/navigation.md) for more details on how to achieve this.
 - Finish up by changing the rating text colour and rendering the showtimes using the [moment](https://momentjs.com) library.
 
 ## Resources

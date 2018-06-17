@@ -51,7 +51,7 @@ Next, we'll discover how to navigate between different pages in a React Native a
 
 ### Section 3: List/Detail pattern
 
-Then, we'll discuss the list/detail pattern and how to apply it in  React Native app.
+Then, we'll discuss the list/detail pattern and how to apply it in a React Native app.
 
 - Start with the [notes](notes/lists.md)
 - Move on to the [challenges](challenges/lists.md)

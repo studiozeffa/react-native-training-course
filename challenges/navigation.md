@@ -6,7 +6,7 @@
 
 - Install the React Navigation library with `yarn`.
 - Create a new component `StartScreen`. Render a `TouchableHighlight` button in the centre of the screen. It should be 200 wide and 50 high, and have a border radius of 8, with a background colour of #388E3C. Inside the button, render a text label 'View Image' - this should be bold, white, of size 18 and centered in the button.
-- Create a new navigator by calling the `StackNavigator` function, passing in a configuration object. This object should include a single route to the `StartScreen`.
+- Create a new navigator by calling the `createStackNavigator()` function, passing in a configuration object. This object should include a single route to the `StartScreen`.
 - Export this navigator as the default export from `App.js`.
 
 > At this point, you should see an app with a blank headerbar, and a single button in the centre of the screen.

@@ -44,7 +44,7 @@ Each screen will be rendered with a headerbar, and will also receive a `navigati
 ``` jsx
 import React from 'react';
 import { View, Text } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 const HomeScreen = () => (
   <View><Text>This is the Home Screen!</Text></View>
@@ -54,7 +54,7 @@ const InfoScreen = () => (
   <View><Text>This is the Info Screen!</Text></View>
 );
 
-const RootNavigator = StackNavigator({
+const RootNavigator = createStackNavigator({
   Home: HomeScreen,
   Info: InfoScreen
 });
@@ -126,7 +126,7 @@ class HomeScreen extends Component {
 
 ## Passing data to screen
 
-Pass an object as the second argument to `navigate` to send data to the screen. Pull it out with `state.params`:
+Pass an object as the second argument to `navigate` to send data to the screen. Pull it out with `getParam()`:
 
 ``` jsx
 class HomeScreen extends Component {
@@ -139,7 +139,7 @@ class HomeScreen extends Component {
 
 class InfoScreen extends Component {
   render() {
-    const { body } = this.props.navigation.state.params;
+    const body = this.props.navigation.getParam('body');
     return <Text>{body}</Text>;
   }
 }
@@ -163,7 +163,7 @@ class HomeScreen extends Component {
 class InfoScreen extends Component {}
 
 InfoScreen.navigationOptions = ({navigation}) => ({
-  title: navigation.state.params.title
+  title: navigation.getParam('title')
 })
 ```
 
@@ -174,7 +174,7 @@ InfoScreen.navigationOptions = ({navigation}) => ({
 You can modify all instances of the headerbar in a `StackNavigator` by setting a `navigationOptions` property via a second argument:
 
 ``` js
-const RootNavigator = StackNavigator({
+const RootNavigator = createStackNavigator({
   Home: HomeScreen,
   Info: InfoScreen
 }, {

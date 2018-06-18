@@ -31,7 +31,7 @@ You can now use the Google Chrome Developer Tools to step through the JavaScript
 
 In development mode, you may see a Yellow or Red Box notification.
 
-- A Yellow Box is displayed when a warning occurs. A warning indicates that some part of your code could be modified to conform to best practices, or improve performance. These won't be displayes in production mode.
+- A Yellow Box is displayed when a warning occurs. A warning indicates that some part of your code could be modified to conform to best practices, or improve performance. These won't be displayed in production mode.
 - A Red Box is displayed when your app has crashed. During development, this is normally due to a syntax error in your code. In production mode, your app will crash without a Red Box being shown.
 
 <!-- break -->

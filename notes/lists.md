@@ -97,7 +97,7 @@ import { View, Text, FlatList } from 'react-native';
 
 class List extends Component {
   keyExtractor(item, index) {
-    return index;
+    return `${index}`;  // must return a string here.
   }
 
   render() {
@@ -263,7 +263,7 @@ const RightNow = ({date}) => (
 ### Useful third party modules
 
 - [Lodash](https://lodash.com)
-- [Moment](https://moment.com)
+- [Moment](https://momentjs.com)
 - [React Navigation](https://reactnavigation.org)
 - [Redux](https://redux.js.org/), [React Redux](https://github.com/reactjs/react-redux) and [Redux Persist](https://github.com/rt2zz/redux-persist)
 - [Collection of React Native components](http://www.awesome-react-native.com/#components)

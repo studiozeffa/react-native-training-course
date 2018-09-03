@@ -107,12 +107,7 @@ Open up the resulting project in your code editor. You should see a few JavaScri
 
 ## Troubleshooting
 
-### (Windows) Expo app can't connect to development server
-
-- Ensure your computer and device are on the same network.
-- If you are on Windows, and have VirtualBox or VMWare installed, `yarn start` might not work properly. [Follow these instructions to solve](https://github.com/react-community/create-react-native-app/issues/60#issuecomment-317104728).
-
-### (Mac) Unable to start server
+### Unable to start server
 
 If you see the following message:
 
@@ -124,6 +119,13 @@ See https://git.io/v5vcn for more information, either install watchman or run th
 ```
 
 You need to install [Watchman](https://facebook.github.io/watchman/) before continuing.
+
+### (Windows) Expo app can't connect to development server
+
+- Ensure your computer and device are on the same network.
+- If you are on Windows, and have VirtualBox or VMWare installed, `yarn start` might not work properly. Try these fixes in turn:
+  - [Reassign VirtualBox network interface priorities](https://github.com/react-community/create-react-native-app/issues/60#issuecomment-317104728)
+  - [Allow Expo connection through the firewall](https://github.com/expo/expo/issues/438#issuecomment-352640364)
 
 <!-- break -->
 

@@ -27,6 +27,17 @@ You can now use the Google Chrome Developer Tools to step through the JavaScript
 
 <!-- break -->
 
+## React Native Debugger
+
+An alternative, superior option for debugging is with a tool called [React Native Debugger]().
+
+This provides access to the Chrome, React and Redux DevTools, all in one window.
+
+- When starting for the first time, go to Debugger -> New Window and open a new window on port 19001.
+- Then, shake your device and choose 'Toggle Inspector'. This allows you to inspect your views in the React DevTools.
+
+<!-- break -->
+
 ## Yellow / Red Box notifications
 
 In development mode, you may see a Yellow or Red Box notification.

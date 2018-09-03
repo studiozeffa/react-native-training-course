@@ -140,11 +140,11 @@ return (
 
 An `Image` component is used to render an image, either stored locally within the app, or from a remote URL.
 
-Local images must be `require`d:
+Local images must be `import`ed:
 
 ``` jsx
-const source = require('./resources/image.png');
-return <Image source={source} />
+import image from './resources/image.png';
+return <Image source={image} />
 ```
 
 To support high resolution displays, provide three versions of each image, at 1x, 2x and 3x sizes. Name the images as follows - React Native will choose the best one automatically:
@@ -218,13 +218,13 @@ A button which lowers its opacity when it is tapped.
 Often used for 'backgroundless' buttons, such as icon buttons in a header or tab bar.
 
 ``` jsx
-const iconSource = require('./heart.png');
+import icon from './heart.png';
 const styles = StyleSheet.create({
   icon: { height: 32, width: 32, margin: 10 }
 });
 return (
   <TouchableOpacity activeOpacity={0.5} onPress={this.onPress}>
-    <Image style={styles.icon} source={iconSource} />
+    <Image style={styles.icon} source={icon} />
   </TouchableOpacity>
 );
 ```

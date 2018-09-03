@@ -97,6 +97,26 @@ return (
 
 <!-- break -->
 
+## Dynamic Styles
+
+Sometimes you need to add dynamic styles to a component, e.g. based on a prop.
+
+Use `StyleSheet.create` outside your component for static styles, and apply any dynamic styles inside the render method:
+
+``` jsx
+const styles = StyleSheet.create({
+  box: {
+    height: 100, width: 100, margin: 10
+  }
+});
+
+const Box = ({ color }) => (
+  <View style={[styles.box, { backgroundColor: color } ]} />
+);
+```
+
+<!-- break -->
+
 ## Text
 
 `Text` is used to render a set of characters to the screen.

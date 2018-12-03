@@ -1,3 +1,4 @@
+assets: ['notes/assets']
 css: |
   @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
   @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -33,6 +34,10 @@ css: |
   code {
     background: #e7e8e2;
     border-radius: 5px;
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
   .remark-code {
     font-size: 1em;

@@ -80,7 +80,11 @@ npm start
 
 Almost immediately, you should see a page opened in your web browser. This is the Expo Developer Tools window. Eventually, this window will present a QR code.
 
-![Screenshot of Expo Developer Tools](assets/expo-developer-tools.png)
+<!-- break -->
+
+![Screenshot of Expo Developer Tools](/notes/assets/expo-developer-tools.png)
+
+<!-- break -->
 
 Now, go to your device and do the following:
 
@@ -103,7 +107,6 @@ Open up the resulting project in your code editor. You should see a few JavaScri
 - `assets/` folder: holds the icon and splashscreen images that Expo will use when you build your app for publishing to the store.
 - `App.js` - the entrypoint for the app. Open this up and you'll see the sample React Native app which is created by the Expo CLI.
 - `app.json` - metadata for your app. Used for various things, particularly when publishing the app to the App Store.
-- `babel.config.js` - configuration for the [Babel](https://babeljs.io) transpiler, used to convert the JavaScript you write into something that the device understands.
 - `package.json` - holds a list of the direct dependencies for your app.
 - `package-lock.json` - holds a complete list of all dependencies that were installed by the Expo CLI.
 
@@ -124,12 +127,16 @@ See https://git.io/v5vcn for more information, either install watchman or run th
 
 You need to install [Watchman](https://facebook.github.io/watchman/) before continuing.
 
+<!-- break -->
+
 ### (Windows) Expo app can't connect to development server
 
 - Ensure your computer and device are on the same network.
-- If you are on Windows, and have VirtualBox or VMWare installed, `yarn start` might not work properly. Try these fixes in turn:
+- If you are on Windows, and have VirtualBox or VMWare installed, `npm start` might not work properly. Try these fixes in turn:
   - [Reassign VirtualBox network interface priorities](https://github.com/react-community/create-react-native-app/issues/60#issuecomment-317104728)
   - [Allow Expo connection through the firewall](https://github.com/expo/expo/issues/438#issuecomment-352640364)
+
+<!-- break -->
 
 ### (iPhone) Can't scan the QR code
 

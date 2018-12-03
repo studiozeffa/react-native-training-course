@@ -6,12 +6,11 @@ The tl;dr is:
 
 - Install [node.js](https://nodejs.org/en/)
 - Install [watchman](https://nodejs.org/en/)
-- Install [yarn](https://yarnpkg.com/)
 - Install [Google Chrome](https://www.google.com/chrome/)
 - Install the [Expo mobile app](https://expo.io/) on your device
-- Install [Create React Native App](https://github.com/react-community/create-react-native-app)
-- Use Create React Native App to scaffold and start a new app
-- Open Expo and scan the QR code to reveal your new app.
+- Install the [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli)
+- Use the Expo CLI to scaffold and start a new app
+- Open the Expo app on your device and scan the QR code to reveal your new app.
 
 <!-- break -->
 
@@ -31,34 +30,33 @@ You may already have watchman installed: type `watchman -v` in the terminal and 
 
 <!-- break -->
 
-## Install yarn
-
-React Native supports both npm4 and yarn. Node 8, however, ships with npm5 - this is currently unsupported. To get around this, we'll use [yarn](https://yarnpkg.com/), which is generally faster and more reliable than any version of npm.
-
-You may already have yarn installed: type `yarn -v` in the terminal and see if it returns the version number. If not, to install yarn, [go to the download page](https://yarnpkg.com/en/docs/install) and find the installation instructions for your OS.
-
-<!-- break -->
-
 ## Install Google Chrome
 
 In order to connect to your app for debugging purposes, you need to use Google Chrome. If you don't have it installed, grab it from [this download page](https://www.google.com/chrome/browser/desktop/).
+
+<!-- break -->
 
 ## Install the Expo mobile app
 
 The Expo mobile app allows you to connect to and view your app on your mobile device, whilst it is being developed on your local machine.
 
-To install it, go to the App Store or Google Play Store on your device, and search for 'Expo'. If you are reading this on your mobile device, use these links to install the [iPhone](https://itunes.apple.com/app/apple-store/id982107779?mt=8) and [Android](https://play.google.com/store/apps/details?id=host.exp.exponent) apps respectively.
+To run Expo, you need one of the following devices:
+
+- An iPhone running iOS 11 or later
+- An Android phone running Android 6.0 (Marshmallow) or later
+
+To install the app, go to the App Store or Google Play Store on your device, and search for 'Expo'. If you are reading this on your mobile device, use these links to install the [iPhone](https://itunes.apple.com/app/apple-store/id982107779?mt=8) and [Android](https://play.google.com/store/apps/details?id=host.exp.exponent) apps respectively.
 
 <!-- break -->
 
-## Install Create React Native App
+## Install the Expo CLI
 
-[Create React Native App](https://github.com/react-community/create-react-native-app) is the easiest way to start building a new React Native application. It allows you to start a project without installing or configuring any tools to build native code.
+The [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli) is the easiest way to start building a new React Native application. It allows you to start a project without installing or configuring any tools to build native code.
 
 Install it with npm:
 
 ``` bash
-npm install -g create-react-native-app
+npm install -g expo-cli
 ```
 
 All being well, you should now have installed everything you need to get started.
@@ -70,23 +68,26 @@ All being well, you should now have installed everything you need to get started
 On your local machine, open a terminal window and run:
 
 ``` bash
-create-react-native-app my-sample-app
+expo init my-sample-app
 ```
 
-Create React Native App should busy itself by creating your app's development workspace, and installing all dependencies with yarn. Once it is done, run:
+The Expo CLI should busy itself by creating your app's development workspace, and installing all dependencies with npm. Once it is done, run:
 
 ``` bash
 cd my-sample-app
-yarn start
+npm start
 ```
 
-Wait a couple of minutes for the server to start, and then you should see a QR code presented in the terminal.
+Almost immediately, you should see a page opened in your web browser. This is the Expo Developer Tools window. Eventually, this window will present a QR code.
+
+![Screenshot of Expo Developer Tools](assets/expo-developer-tools.png)
 
 Now, go to your device and do the following:
 
+- Firstly, **make sure your device is on the same WiFi network as your computer**. The Expo app needs to be able to 'see' your computer, which means they must both be on the same network.
 - If you have an iPhone:
   - Open to the camera app and point the camera at the QR code.
-  - A notification should appear at the top of the screen, asking if you want to open the link in the Expo app.
+  - A notification should appear at the top of the screen, asking if you want to open the link in the Expo app. (Note that you must have iOS 11 or later for this to work).
   - Tap the notification, the Expo app will open and will begin to load your app.
 - If you have an Android phone:
   - Open the Expo app and tap the 'Scan QR code' link.
@@ -96,12 +97,15 @@ Now, go to your device and do the following:
 
 ## Code structure
 
-Open up the resulting project in your code editor. You should see a few JavaScript, JSON and config files. Here's a summary of the important ones:
+Open up the resulting project in your code editor. You should see a few JavaScript, JSON and config files:
 
-- `App.js` - the entrypoint for the app. Open this up and you'll see the sample React Native app which is created by the `create-react-native-app` tool.
+- `.expo/` folder - holds some configuration information for Expo. You won't need to edit anything in this folder.
+- `assets/` folder: holds the icon and splashscreen images that Expo will use when you build your app for publishing to the store.
+- `App.js` - the entrypoint for the app. Open this up and you'll see the sample React Native app which is created by the Expo CLI.
 - `app.json` - metadata for your app. Used for various things, particularly when publishing the app to the App Store.
-- `package.json` - holds a list of the dependencies for your app.
-- `App.test.js` - you can run unit tests on a React Native app using a tool called [Jest](https://facebook.github.io/jest/). The convention is to name test files with the `.test.js` suffix. We won't be covering testing on this course.
+- `babel.config.js` - configuration for the [Babel](https://babeljs.io) transpiler, used to convert the JavaScript you write into something that the device understands.
+- `package.json` - holds a list of the direct dependencies for your app.
+- `package-lock.json` - holds a complete list of all dependencies that were installed by the Expo CLI.
 
 <!-- break -->
 
@@ -127,11 +131,12 @@ You need to install [Watchman](https://facebook.github.io/watchman/) before cont
   - [Reassign VirtualBox network interface priorities](https://github.com/react-community/create-react-native-app/issues/60#issuecomment-317104728)
   - [Allow Expo connection through the firewall](https://github.com/expo/expo/issues/438#issuecomment-352640364)
 
+### (iPhone) Can't scan the QR code
+
+You need iOS 11 or later in order for the QR code to be recognised by the camera.
+
 <!-- break -->
 
 ## Other Guides
 
-Refer to the below to see some alternative setup instructions. They all follow the same general pattern as above but may offer additional help.
-
-- [Official Docs](https://facebook.github.io/react-native/docs/getting-started.html)
-- [React Native Express](http://www.reactnativeexpress.com/quick_start)
+Refer to the [official docs](https://facebook.github.io/react-native/docs/getting-started.html) for more information.

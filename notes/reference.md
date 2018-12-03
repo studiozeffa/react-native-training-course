@@ -16,7 +16,6 @@ The following notes provide a broad reference guide, to allow you to build a Rea
 ### Creating App
 
 - [Expo](https://expo.io)
-- [yarn](https://yarnpkg.org)
 - [Setup and Scaffolding](notes/01-setup.md)
 
 ### Building Blocks

@@ -1,6 +1,6 @@
 # React Native Components: Challenges
 
-> Tip: start a new app with `create-react-native-app` to complete these challenges.
+> Tip: start a new app with `expo init` to complete these challenges.
 
 - Modify the scaffolded `App.js` file so that the text is aligned to the top left of the screen (hint: `App.js` contains flexbox styles to center the text, this needs to be undone). Give the container a padding of 20, which will stop the text from overlapping the statusbar at the top of the screen.
 - Download the three _morpheus_ images from the [assets folder](assets/) to your computer. Create an `Image` inside your container which should display the image, replacing the existing text. Ensure it is horizontally centred and has a vertical margin of 5.

@@ -1,6 +1,6 @@
 # List/Detail Pattern: Challenges
 
-> Tip: start a new app with `create-react-native-app` to complete these challenges.
+> Tip: start a new app with `expo init` to complete these challenges.
 
 - Use React Navigation to create two screens: `List` and `Detail`. Add a button to navigate from list -> detail. Use the following configuration:
   - Give the List screen a headerbar title of 'Contacts'

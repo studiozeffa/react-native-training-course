@@ -150,6 +150,14 @@ You need iOS 11 or later in order for the QR code to be recognised by the camera
 
 <!-- break -->
 
+### App is constantly reloading
+
+If your code is located inside a folder which is synced to a cloud service (e.g. Dropbox or iCloud), when the sync occurs Expo may see your files as having changed, causing the app to constantly reload.
+
+To solve this problem, move your code to a folder which is not synced to the cloud.
+
+<!-- break -->
+
 ## Other Guides
 
 Refer to the [official docs](https://facebook.github.io/react-native/docs/getting-started.html) for more information.

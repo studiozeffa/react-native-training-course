@@ -28,8 +28,26 @@
 > You should now have an app which navigates from `StartScreen` to `ImageScreen`.
 
 - Add two more buttons to the StartScreen below the first. Make sure they have a space of 10 between them.
-- The second button should have the title 'View Greyscale Image'. When tapped, it should show the ImageScreen with a headerbar title of `Greyscale Image` and an image with the URI `https://picsum.photos/g/400/600/?random`.
-- The third button should have the title 'View Blurred Image'. When tapped, it should show the ImageScreen with a headerbar title of `Blurred Image` and an image with the URI `https://picsum.photos/400/600/?random&blur`.
+- The second button should have the title 'View Greyscale Image'. When tapped, it should show the **same** ImageScreen with a headerbar title of `Greyscale Image` and an image with the URI `https://picsum.photos/g/400/600/?random`.
+- The third button should have the title 'View Blurred Image'. When tapped, it should show the **same** ImageScreen with a headerbar title of `Blurred Image` and an image with the URI `https://picsum.photos/400/600/?random&blur`.
+
+When you have finished, you should only have one `ImageScreen` component.
+
+``` js
+// This is correct
+createStackNavigator({
+  Start: StartScreen,
+  Image: ImageScreen
+});
+
+// This is incorrect - find a different way
+createStackNavigator({
+  Start:          StartScreen,
+  RegularImage:   RegularImageScreen,
+  GreyscaleImage: GreyscaleImageScreen,
+  BlurredImage:   BlurresImageScreen,
+});
+```
 
 ## Extras
 

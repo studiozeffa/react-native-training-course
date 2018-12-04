@@ -25,6 +25,9 @@
 
 - Create a `Button` component, to be used for the two buttons. Ensure it accepts a background colour, underlay colour, title text and `onPress` handler as props.
 - If one of the buttons is pressed five times in a row, disable that button, until the other button is pressed. A disabled button should be styled in a dark grey and should not respond to taps. (Hint: use `state` to track the button presses, and check out the `disabled` prop of `TouchableHighlight`).
+
+> Note: React Native does not support using `.jsx` as a file extension. Use `.js` for your custom components instead.
+
 - Remove the existing text underneath the image. Inside the ScrollView, above the Quotes, create a new history section with the heading _History_.
 - Each time one of the buttons is pressed, add a new history item to the top of the _History_ list. Each item in the list should read _You chose the {red|blue} pill!_, depending on the pill that was chosen. (Hint: you'll need to use `state` to track the history of chosen pills))
 - Modify the app to use `Redux` instead of `state`:

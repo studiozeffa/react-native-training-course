@@ -2,7 +2,7 @@
 
 So far, we've been running the app in _development mode_. This trades a larger app size for a faster development experience. Later, we'll discuss how to build a _production_ version of the app.
 
-In development mode, we can gain access to the _developer menu_ by shaking the device.
+In development mode, we can gain access to the _developer menu_ by shaking the device (or pressing `Cmd-D` in the simulator).
 
 This menu provides us with many options. We'll be discussing two of them:
 
@@ -29,7 +29,7 @@ You can now use the Google Chrome Developer Tools to step through the JavaScript
 
 ## React Native Debugger
 
-An alternative, superior option for debugging is with a tool called [React Native Debugger]().
+An alternative, superior option for debugging is with a tool called [React Native Debugger](https://github.com/jhen0409/react-native-debugger).
 
 This provides access to the Chrome, React and Redux DevTools, all in one window.
 

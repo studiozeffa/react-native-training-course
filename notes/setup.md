@@ -71,6 +71,10 @@ On your local machine, open a terminal window and run:
 expo init my-sample-app
 ```
 
+The CLI will ask which template to use: accept the default (blank) by pressing Enter.
+
+> Note: if you have [yarn](https://yarnpkg.com) installed, the next prompt you will see is _Use Yarn to install dependencies?_ We are going to use npm, so press `n`.
+
 The Expo CLI should busy itself by creating your app's development workspace, and installing all dependencies with npm. Once it is done, run:
 
 ``` bash

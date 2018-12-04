@@ -212,9 +212,7 @@ A `Button` component also exists, which is a thin wrapper around `TouchableHighl
 
 ### TouchableHighlight
 
-A button which changes the colour of its background when it is tapped.
-
-Often used for main 'call-to-action' type buttons, or tappable items in a list.
+A button which changes the colour of its background (`underlayColor` prop) when it is tapped. Often used for main 'call-to-action' type buttons, or tappable items in a list.
 
 ``` jsx
 const styles = StyleSheet.create({
@@ -228,6 +226,8 @@ return (
   </TouchableHighlight>
 );
 ```
+
+_Note: the `underlayColor` will only work if the `onPress` prop is set._
 
 <!-- break -->
 

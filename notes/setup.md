@@ -5,7 +5,7 @@ This guide walks through how to set up your machine to develop a React Native ap
 The tl;dr is:
 
 - Install [node.js](https://nodejs.org/en/)
-- Install [watchman](https://nodejs.org/en/)
+- (If on macOS) Install [watchman](https://nodejs.org/en/)
 - Install [Google Chrome](https://www.google.com/chrome/)
 - Install the [Expo mobile app](https://expo.io/) on your device
 - Install the [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli)
@@ -23,6 +23,8 @@ You may already have watchman installed: type `node -v` in the terminal and see 
 <!-- break -->
 
 ## Install watchman
+
+> Note: if you aren't on a Mac, you can skip this step.
 
 Watchman watches files for changes, and triggers an action when they do. It's used internally by the React Native development environment to auto-reload your app when you save a source file.
 

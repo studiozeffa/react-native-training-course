@@ -235,10 +235,10 @@ and the following on Android:
 
 Since much of React Native runs as JavaScript, we can use any JavaScript-based library, provided it does not use any browser APIs.
 
-Install a third party library with `yarn`:
+Install a third party library with `npm`:
 
 ``` bash
-yarn add moment
+npm install moment
 ```
 
 Then import the library for use as normal:

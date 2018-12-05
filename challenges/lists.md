@@ -2,7 +2,7 @@
 
 > Tip: start a new app with `expo init` to complete these challenges.
 
-- Use React Navigation to create two screens: `List` and `Detail`. Add a button to navigate from list -> detail. Use the following configuration:
+- Use React Navigation to create two screens: `List` and `Detail`. Use the following configuration:
   - Give the List screen a headerbar title of 'Contacts'
   - Make sure the headerbar has a background colour of #2a3daa, with white text. If you are on iOS, don't forget the statusbar text colour too.
 - Pull down the list of contacts from [here](assets/contacts.json) and put it into your project filesystem.

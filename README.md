@@ -55,16 +55,21 @@ Then, we'll discuss the list/detail pattern and how to apply it in a React Nativ
 
 - Start with the [notes](notes/lists.md)
 - Move on to the [challenges](challenges/lists.md)
-- Finish by building an [app from a brief](apps/films-guide-app/README.md)
+
+### Section 4: Apps
+
+The remainder of the training course is spent building apps, which puts everything we've learned so far into practice.
+
+There are two apps to choose from:
+
+- A [news reader app](apps/news-feed-app/README.md)
+- A [films guide app](apps/films-guide-app/README.md)
+
+Take a look at the brief for the apps and decide which one you'd like to try first. If you are unsure about which one to pick, the news feed app is simpler - so it might make sense to start with that one. There will be time to try building both if you like, or you can dive deeper into one of the apps by implementing the extras listed in the brief.
 
 ### Quiz
 
-Finally, the course will finish with a quiz, to assess your new knowledge.
-
-The quiz comprises two parts:
-
-1. A set of questions, which will be distributed separately.
-2. Build a news reader app, [from the following brief](apps/news-feed-app/README.md).
+Finally, the course will finish with a quiz, to assess your new knowledge. This will take the form of a series of questions, which will be distributed separately.
 
 ## Other Notes
 

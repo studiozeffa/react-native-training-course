@@ -1,6 +1,6 @@
 # Films Guide App
 
-The films guide app is the second app we build on the course. It builds upon the basics introduced in the Counter app and introduces a few new concepts, including multi-screen navigation and retrieving data from an API.
+The films guide app builds upon the basics introduced in the Counter app and introduces a few new concepts, including multi-screen navigation and retrieving data from an API.
 
 ## Wireframe
 
@@ -26,8 +26,9 @@ The app should:
 
 ## Suggested Approach
 
-- Start by installing React Navigation and setting up the list-detail screens.
-- Import the [films JSON data](assets/films.json) and use it to render the list screen.
+- Scaffold the app with `expo init`.
+- Install React Navigation and set up the list-detail screens.
+- Import the [films JSON data](assets/films.json) and use it to render the list screen as shown in the wireframe.
 - Implement the main content view in the detail screen (ignore the headerbar button for now).
 - Migrate the app to use Redux. Initialise the store with the films JSON data.
 - Use Redux Thunk to fetch the data from the films API instead: `https://filmsonfreeview.herokuapp.com/api/films`. While the list screen is loading the data, consider rendering an [ActivityIndicator](https://facebook.github.io/react-native/docs/activityindicator.html).

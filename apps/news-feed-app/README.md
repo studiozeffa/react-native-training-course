@@ -1,6 +1,6 @@
 # News Feed App
 
-The news feed app is the third app we build on the course. It is intended as an informal assessment to test your React Native knowledge gained throughout the course.
+The news feed app builds upon the basics introduced in the Counter app and introduces a few new concepts, including multi-screen navigation and retrieving data from an API.
 
 ## Wireframe
 
@@ -37,7 +37,7 @@ The articles data can be [found at this link](assets/articles.json). Use this js
 
 ## Tips
 
-- Scaffold the app with `create-react-native-app`.
+- Scaffold the app with `expo init`.
 - Begin by setting up React Navigation to navigate from one screen to another. Use a `StackNavigator` to achieve this.
 - Continue by creating the List Screen.
 - Finish with the Detail Screen.

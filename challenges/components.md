@@ -30,8 +30,3 @@
 
 - Remove the existing text underneath the image. Inside the ScrollView, above the Quotes, create a new history section with the heading _History_.
 - Each time one of the buttons is pressed, add a new history item to the top of the _History_ list. Each item in the list should read _You chose the {red|blue} pill!_, depending on the pill that was chosen. (Hint: you'll need to use `state` to track the history of chosen pills))
-- Modify the app to use `Redux` instead of `state`:
-  - Install and import `redux` and `react-redux`
-  - Create a store, a reducer and two actions (one for adding a history item, the other to track the button presses)
-  - Implement the reducer to add a history item / track the button pressed as appropriate
-  - Remove `state` from the component and use `mapStateToProps`/`mapDispatchToProps` instead

@@ -4,7 +4,7 @@
 
 - Use React Navigation to create two screens: `List` and `Detail`. Use the following configuration:
   - Give the List screen a headerbar title of 'Contacts'
-  - Make sure the headerbar has a background colour of #2a3daa, with white text. If you are on iOS, don't forget the statusbar text colour too.
+  - Make sure the headerbar has a background colour of `#2a3daa`, with white text. If you are on iOS, don't forget the statusbar text colour too.
 - Pull down the list of contacts from [here](assets/contacts.json) and put it into your project filesystem.
 - Import the contacts and use FlatList to render each contact in the `List` screen. Each item should:
   - have a height of 50
@@ -33,6 +33,6 @@ The final app should resemble the following:
     <img src="screenshots/avatar-list.png" height="140">
 
 - Add a chevron to the right hand side of the list item, but only on iOS:
-  - Use the [expo vector icons](https://docs.expo.io/versions/latest/guides/icons.html#expovector-icons) package, and search for the appropriate icon to use.
+  - Use the [expo vector icons](https://docs.expo.io/versions/latest/guides/icons/#expovector-icons) package, and search for the appropriate icon to use.
   - Ensure the icon is vertically centered inside the item, is coloured #ddd and has a size of 16.
-- Add an icon to the headerbar of the Detail view. When the icon is tapped, open the [Expo WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser.html) with the URL of the contact's favourite film. (Hint: use a `TouchableOpacity`, and check out the [React Navigation docs](https://reactnavigation.org/docs/header-buttons.html) for an example of headerbar buttons).
+- Add an icon to the headerbar of the Detail view. When the icon is tapped, open the [Expo WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser/) with the URL of the contact's favourite film. (Hint: use a `TouchableOpacity`, and check out the [React Navigation docs](https://reactnavigation.org/docs/header-buttons.html) for an example of headerbar buttons).

@@ -2,7 +2,9 @@
 
 This guide walks through how to set up your machine to develop a React Native app.
 
-The tl;dr is:
+We are going to be building apps using [Expo](http://expo.io), a tool which makes building React Native apps much simpler. In particulat, we'll be using the _Managed Workflow_ - this mode allows us to get started quickly without needing to install too many things.
+
+That being said, we still have a few things to set up before we can start developing. The tl;dr is:
 
 - Install [node.js](https://nodejs.org/en/)
 - (If on macOS) Install [watchman](https://nodejs.org/en/)
@@ -16,7 +18,7 @@ The tl;dr is:
 
 ## Install node.js
 
-The first thing to do is to ensure that you have [node.js](https://nodejs.org/en/) installed. At the time of writing, node 8 is the latest stable release, and is recommended (although node 10 should work just fine as well).
+The first thing to do is to ensure that you have [node.js](https://nodejs.org/en/) installed. Expo requires at least version 10.
 
 You may already have watchman installed: type `node -v` in the terminal and see if it returns the version number. If you don't have node installed, [head over to the node website](https://nodejs.org/en/download/) to download and install a copy.
 
@@ -75,6 +77,8 @@ expo init my-sample-app
 
 The CLI will ask which template to use: accept the default (blank) by pressing Enter.
 
+The CLI will then ask for the name of your app. Type 'My sample app' and press enter.
+
 > Note: if you have [yarn](https://yarnpkg.com) installed, the next prompt you will see is _Use Yarn to install dependencies?_ We are going to use npm, so press `n`.
 
 The Expo CLI should busy itself by creating your app's development workspace, and installing all dependencies with npm. Once it is done, run:
@@ -102,6 +106,10 @@ Now, go to your device and do the following:
 - If you have an Android phone:
   - Open the Expo app and tap the 'Scan QR code' link.
   - Point the camera at the QR code. It will scan and open your app.
+
+All being well, you should see the following app UI on your device:
+
+<img src="assets/starter-app.png" height="500">
 
 <!-- break -->
 
@@ -160,4 +168,4 @@ To solve this problem, move your code to a folder which is not synced to the clo
 
 ## Other Guides
 
-Refer to the [official docs](https://facebook.github.io/react-native/docs/getting-started.html) for more information.
+Refer to the [Expo docs](https://docs.expo.io/versions/latest/workflow/up-and-running/) for more information.

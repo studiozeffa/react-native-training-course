@@ -34,7 +34,12 @@ These requirements are not part of the core project, but can be implemented as e
 
 - A button should be present to reset the counter value.
 - A button should be present to reset the history list.
-- When the app is restarted, it should remember the previous counter value, and all history. (Hint: the app should use Redux, and [Redux Persist](https://github.com/rt2zz/redux-persist))
+- When the app is restarted, it should remember the previous counter value, and all history. To persist data between app reloads, you can use the `[AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage)` module:
+  - Import it from React Native in the same way as for other RN components
+  - Use `AsyncStorage.setItem(key, value)` to put a _string_ into the storage
+  - Use `AsyncStorage.getItem(key)` to pull it out again
+  - You'll need to figure out the best time to _set_ and _get_ your app's state so that it will persist between app reloads.
+  - (Hint: you'll need to use `[JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)` and `[JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)` to convert your app's state from an object to a string, and vice versa - AsyncStorage can only store strings)
 
 ## Completed app
 

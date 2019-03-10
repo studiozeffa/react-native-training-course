@@ -4,8 +4,7 @@ These requirements are not part of the core assignment, but can be implemented a
 
 - The detail screen should include a button which, when tapped, will open an in-app-browser screen at the specified article's URL. Use the Expo SDK [WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser.html) module to achieve this.
 - Change the Back button to read 'Back' on the detail page instead of 'BBC News'. Hint: refer to the [React Navigation docs](https://reactnavigation.org/docs/navigators/stack) and [this issue](https://github.com/react-community/react-navigation/issues/1358).
-- Convert the app to store the articles inside a Redux store.
-- Read the articles from an API instead of a local JSON file:
+- Read the articles from an API instead of a local JSON file (hint: use `axios`):
   - The API we will be using is https://newsapi.org/
   - To access the API, you need to [register for an API key](https://newsapi.org/register)
   - The API endpoint we will use is https://newsapi.org/v2/everything?sources=bbc-news&language=en&apiKey={API_KEY}. You will need to replace `{API_KEY}` with the API key you received when registering with the service.

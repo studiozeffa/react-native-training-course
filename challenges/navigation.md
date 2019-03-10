@@ -52,6 +52,6 @@ createStackNavigator({
 ## Extras
 
 - Add a button to the headerbar of the `ImageScreen` (see the [React Navigation docs](https://reactnavigation.org/docs/header-buttons.html) for more info on how to add a button to the headerbar).
-  - The button should be a `TouchableOpacity`. Use an icon as the child for this buttons (see the [Expo docs](https://docs.expo.io/versions/latest/guides/icons.html) regarding using icons, and choose an icon from [the directory](https://expo.github.io/vector-icons/)).
-  - When the button is tapped, open an in-app browser window using the image URL that was passed in to the `ImageScreen` (use the Expo [WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser.html) to achieve this).
+  - The button should be a `TouchableOpacity`. Use an icon as the child for this buttons (see the [Expo docs](https://docs.expo.io/versions/latest/guides/icons/) regarding using icons, and choose an icon from [the directory](https://expo.github.io/vector-icons/)).
+  - When the button is tapped, open an in-app browser window using the image URL that was passed in to the `ImageScreen` (use the Expo [WebBrowser](https://docs.expo.io/versions/latest/sdk/webbrowser/) to achieve this).
 - Using the [documentation on modals](https://reactnavigation.org/docs/en/modal.html), add an onPress handler to the image which loads a full-width version of the image in a modal window. Ensure the modal window has a close button, which should dismiss the modal and return the user to the Image screen.

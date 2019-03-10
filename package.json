@@ -7,7 +7,8 @@
     "slides:components": "remarker -s notes/components.md",
     "slides:debugging": "remarker -s notes/debugging.md",
     "slides:navigation": "remarker -s notes/navigation.md",
-    "slides:lists": "remarker -s notes/lists.md"
+    "slides:lists": "remarker -s notes/lists.md",
+    "slides:data": "remarker -s notes/data.md"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,6 @@
   },
   "homepage": "https://github.com/studiozeffa/react-native-training-course#readme",
   "devDependencies": {
-    "remarker": "studiozeffa/remarker"
+    "remarker": "github:studiozeffa/remarker"
   }
 }

@@ -1,3 +1,31 @@
+## Running the app on your computer
+
+Mobile apps are built to run on mobile devices. You should always be testing the app on real devices.
+
+Using a mobile device during development can be cumbersome, however. Apple and Google realise this, and so offer methods for running the app on your computer during development.
+
+We'll briefly introduce these here - feel free to install and use these tools for the remainder of this course.
+
+<!-- break -->
+
+## iOS simulator
+
+Available with Xcode, the iOS simulator allows you to run an iOS app during development on your Mac (sorry Windows/Linux users - this is only available on a Mac).
+
+The majority of features available in iOS are present in the simulator, with a few notable exceptions (camera, telephony, etc).
+
+To use it, you need to download and install Xcode. The easiest way to do this is via the [Mac App Store](https://itunes.apple.com/app/xcode/id497799835).
+
+<!-- break -->
+
+## Android emulator
+
+This tool is available via Android Studio, and allows you to run an Android app on your computer. Unlike the iOS simulator, the Android emulator is available on all platforms.
+
+To get set up, follow [this handy guide from Expo](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/).
+
+<!-- break -->
+
 ## Debugging Techniques
 
 So far, we've been running the app in _development mode_. This trades a larger app size for a faster development experience. Later, we'll discuss how to build a _production_ version of the app.

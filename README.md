@@ -56,7 +56,14 @@ Then, we'll discuss the list/detail pattern and how to apply it in a React Nativ
 - Start with the [notes](notes/lists.md)
 - Move on to the [challenges](challenges/lists.md)
 
-### Section 4: Apps
+### Section 4: Asynchronous data fetching
+
+Most mobile apps fetch and send data from/to a server. In this section we will discuss the principles behind this.
+
+- Start with the [notes](notes/data.md)
+- Move on to the [challenges](challenges/data.md)
+
+### Section 5: Apps
 
 The remainder of the training course is spent building apps, which puts everything we've learned so far into practice.
 

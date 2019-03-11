@@ -20,7 +20,7 @@ Follow the instructions [in this setup guide](notes/setup.md) to get this sorted
 
 ## Course Structure
 
-The course comprises of three sections, and culminates in a quiz.
+The course comprises of a number of sections, and culminates in a quiz.
 
 In each section, we will:
 

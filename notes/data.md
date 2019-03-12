@@ -145,7 +145,7 @@ It's outside the scope of the course, but you could use the above methods to han
 
 <!-- break -->
 
-## React Lifecycle Methods
+## CRUD
 
 Now that we know how to fetch data, where in our app should the code live to perform the fetching?
 
@@ -162,9 +162,7 @@ These four operations are so common they are often grouped as an acronym **CRUD*
 
 ## React Lifecycle Methods
 
-Oftentimes, APIs are accessed as a result of some user interaction, or periodically (e.g. in the background).
-
-However there are certain situations where we want to e.g. retrieve data when the app first loads, or when a screen is first displayed.
+Three of the four operations listed above (Create, Update and Delete) are normally executed after some user interaction, e.g. filling in a form. Data retrieval, however, can often happen automatically - on app start, or periodically in the background.
 
 To achieve this, we can hook into React **lifecycle methods**. These are methods on React class components, called at particular times in the lifetime of a component.
 

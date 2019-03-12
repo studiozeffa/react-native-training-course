@@ -25,7 +25,29 @@ The final app should resemble the following:
 
 <img src="screenshots/list-detail.png" height="500">
 
-## Extras
+## Extras: Data Fetching
+
+- Hook up the app to load data from a remote API, instead of the local JSON file: `https://robocontacts.herokuapp.com/api/contacts?random` (this will show the contacts in a random order each time).
+- A FlatList contains built-in support for _pull to refresh_, allowing you to drag down from the top of the list to refresh the contents. Use the `onRefresh` prop on the FlatList to achieve this, as per the following pseudocode:
+
+``` js
+class Contacts extends Component {
+
+  refreshData() {
+    // Use axios to refresh data here...
+  }
+
+  render() {
+    return (
+      <FlatList onRefresh={this.refreshData} />
+    )
+  }
+}
+```
+
+- The `refreshing` prop on the `FlatList` is used to determine whether or not to show the refreshing spinner during a pull-to-refresh. If set to `true`, the spinner is displayed - if set to `false`, it is not. Use this prop to display the spinner while the data is being fetched. (Hint: you'll need to use a piece of `state` to store whether the data is being fetched or not).
+
+## Extras: UI
 
 - Use the [react-native-image-progress](https://github.com/oblador/react-native-image-progress) module to show a loading spinner while the contact's image is loading.
 - Modify the FlatList item to include the contact's avatar and company. The company should be displayed below the name, with a grey colour. The avatar should be to the left of them both, and should be enclosed in a circle. For example:

@@ -42,26 +42,26 @@ We take a short break from building apps to discuss the different techniques for
 
 - Refer to the [notes](notes/debugging.md) for more details.
 
-### Section 2: Navigation
+### Section 2: Asynchronous data fetching
+
+Most mobile apps fetch and send data from/to a server. In this section we will discuss the principles behind this.
+
+- Start with the [notes](notes/data.md)
+- Move on to the [challenges](challenges/data.md)
+
+### Section 3: Navigation
 
 Next, we'll discover how to navigate between different pages in a React Native app.
 
 - Start with the [notes](notes/navigation.md)
 - Move on to the [challenges](challenges/navigation.md)
 
-### Section 3: List/Detail pattern
+### Section 4: List/Detail pattern
 
 Then, we'll discuss the list/detail pattern and how to apply it in a React Native app.
 
 - Start with the [notes](notes/lists.md)
 - Move on to the [challenges](challenges/lists.md)
-
-### Section 4: Asynchronous data fetching
-
-Most mobile apps fetch and send data from/to a server. In this section we will discuss the principles behind this.
-
-- Start with the [notes](notes/data.md)
-- Move on to the [challenges](challenges/data.md)
 
 ### Section 5: Apps
 

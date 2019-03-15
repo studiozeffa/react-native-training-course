@@ -38,7 +38,7 @@ The following notes provide a broad reference guide, to allow you to build a Rea
 - [Text truncation](https://facebook.github.io/react-native/docs/text.html#ellipsizemode)
 - [React Navigation](https://reactnavigation.org/docs/getting-started.html)
 - [Vector Icons](https://expo.github.io/vector-icons/)
-- [In-App Browser](https://docs.expo.io/versions/latest/sdk/webbrowser.html)
+- [In-App Browser](https://docs.expo.io/versions/latest/sdk/webbrowser)
 - [Image Progress](https://github.com/oblador/react-native-image-progress)
 - [Parallax ScrollView](https://github.com/i6mi6/react-native-parallax-scroll-view)
 

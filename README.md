@@ -10,7 +10,6 @@ To complete this course, you'll need to be familiar with the following technolog
 
 - Modern JavaScript (ES6 and ES7)
 - React
-- Redux
 
 ## Setting up Development Environment
 
